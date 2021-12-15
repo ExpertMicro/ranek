@@ -20,7 +20,7 @@ export default new Vuex.Store({
       cidade: "",
       estado: ""
     },
-    usuario_produto: null
+    usuario_produtos: null
   },
   mutations: {
     UPDATE_LOGIN(state, payload) {
@@ -30,8 +30,11 @@ export default new Vuex.Store({
       state.usuario = Object.assign(state.usuario, payload);
     },
     UPDATE_USUARIO_PRODUTOS(state, payload) {
-      state.usuario_produtos.unshift(payload);
+      state.usuario_produtos = payload;
     },
+    ADD_USUARIO_PRODUTOS(state, payload) {
+      state.usuario_produtos.unshift(payload);
+    }
 
   },
   actions: {
