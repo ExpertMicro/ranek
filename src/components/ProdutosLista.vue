@@ -87,6 +87,14 @@ export default {
   transition: all 0.2s;
 }
 
+@media screen and (max-width: 500) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+}
+
 .produto:hover {
   box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
   transform: scale(1.1);
